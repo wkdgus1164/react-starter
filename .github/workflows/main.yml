@@ -2,10 +2,6 @@ name: Node CI
 
 on: [ push, pull_request ]
 
-env:
-  AWS_ACCESS_KEY_ID: AKIAQSL66WVE4ANO37KI
-  AWS_SECRET_ACCESS_KEY: 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
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -42,8 +38,8 @@ jobs:
 
       - name: Deploy to Amazon S3
         env:
-          AWS_ACCESS_KEY_ID: ${{ env.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ env.AWS_SECRET_ACCESS_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
           aws s3 cp \
             --recursive \
