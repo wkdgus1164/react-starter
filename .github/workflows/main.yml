@@ -19,5 +19,7 @@ jobs:
       - name: Start Build flows
         working-directory: .
         run: |
-          yarn install
-          yarn build
+          npm install
+          npm run build
+#          yarn install
+#          yarn build
