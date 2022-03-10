@@ -38,6 +38,7 @@ jobs:
 
       - name: AWS Credentials
         run: |
+          echo ${{ secrets.TEST_SECRET }}
           echo ${{ secrets.AWS_ACCESS_KEY_ID }}
           echo ${#AWS_ACCESS_KEY_ID}
           echo $AWS_ACCESS_KEY_ID
