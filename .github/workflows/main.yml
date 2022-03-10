@@ -1,8 +1,11 @@
 name: my workflow
-  on: [ push ]
+  on:
+    push:
+      branches: [ master ]
 
   jobs:
     build:
+
       name: hello github action
       runs-on: ubuntu-18.04
       steps:
