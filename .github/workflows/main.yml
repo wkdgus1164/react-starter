@@ -44,4 +44,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --region ap-northeast-2 \
-            dist s3://github-actions-test
+            dist s3://github-actions-react
