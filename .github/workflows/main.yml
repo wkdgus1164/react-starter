@@ -40,7 +40,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::596122180862:user/S3Access
-          aws-region: ap-northeast
+          aws-region: ap-northeast-2
 
       - name: Copy files to the test website with the AWS CLI
         run: aws s3 sync . s3://github-actions-react
