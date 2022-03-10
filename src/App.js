@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React WITH JENKINS!
+          Learn React WITH Github Actions!
         </a>
       </header>
     </div>
