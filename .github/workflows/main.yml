@@ -40,6 +40,7 @@ jobs:
         run: |
           echo ${{ secrets.AWS_ACCESS_KEY_ID }}
           echo ${#AWS_ACCESS_KEY_ID}
+          echo $AWS_ACCESS_KEY_ID
           echo "Hello"
 
       #      - name: Configure AWS Credentials Action For GitHub Actions
