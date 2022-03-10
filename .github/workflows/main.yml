@@ -1,5 +1,6 @@
 name: my workflow
   on: [ push ]
+
   jobs:
     build:
       name: hello github action
