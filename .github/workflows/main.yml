@@ -37,9 +37,11 @@ jobs:
         run: yarn build
 
       - name: AWS Credentials
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         run: |
-          echo ${{ secrets.TEST_SECRET }}
-          echo ${{ secrets.AWS_ACCESS_KEY_ID }}
-          echo ${#AWS_ACCESS_KEY_ID}
-          echo $AWS_ACCESS_KEY_ID
-          echo "Hello"
+          aws s3 cp \
+          --reecursive \
+          --region ap-northeast-2 \
+          build s3://github-actions-react
